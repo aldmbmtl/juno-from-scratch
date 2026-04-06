@@ -6,7 +6,7 @@ install-argo:
 	@kubectl create namespace argocd
 	@kubectl create -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 	@echo "Waiting for Argo CD to be ready..."
-	@sleep 30
+	@sleep 90
 
 install-nginx:
 	@kubectl apply -f ./nginx.yaml
@@ -17,3 +17,4 @@ install-juno:
 	@bash ./install.sh
 
 juno: build-cluster install-argo install-nginx install-juno
+	@watch kubectl get pods -A
