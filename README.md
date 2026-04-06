@@ -2,6 +2,13 @@
 
 Infrastructure repository for deploying a k3s cluster with Argo CD, nginx ingress, and Juno.
 
+## Prerequisites
+
+- **helm**: Required for Argo CD to deploy nginx ingress
+  ```bash
+  curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+  ```
+
 ## Quick Start
 
 ```bash
