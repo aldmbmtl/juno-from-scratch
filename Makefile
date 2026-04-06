@@ -10,4 +10,4 @@ install-nginx:
 	kubectl apply -f ./nginx.yaml
 
 install-juno:
-	curl -sL "$(curl -s https://api.github.com/repos/juno-fx/Juno-Bootstrap/releases/latest | grep browser_download_url | grep orion-install-helper | cut -d '"' -f 4)" | bash -
+	bash ./install.sh
