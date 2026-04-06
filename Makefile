@@ -1,6 +1,6 @@
 
 build-cluster:
-	@curl -sfL https://get.k3s.io | sh -s - --disable=traefik --node-label juno-innovations.com/service=true
+	@curl -sfL https://get.k3s.io | sh -s - --disable=traefik --node-label juno-innovations.com/service=true --node-label juno-innovations.com/workstation=true
 
 install-argo:
 	@kubectl create namespace argocd
